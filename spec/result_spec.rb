@@ -6,6 +6,8 @@ module Mastermind
     let(:b_pin) { TestPin.new("B") }
     let(:g_pin) { TestPin.new("G") }
     let(:y_pin) { TestPin.new("Y") }
+    let(:p_pin) { TestPin.new("P") }
+    let(:c_pin) { TestPin.new("C") }
     
     context "#initialize" do
       it "gives correct feedback when guess = 'RRRR' and answer = 'RRRR'" do
@@ -48,6 +50,20 @@ module Mastermind
         answer = [y_pin, b_pin, g_pin, y_pin]
         result = Result.new(guess, answer)
         expect(result.value).to eq (Result::CORRECT_POSITION * 2 + Result::CORRECT_COLOR * 2)
+      end
+
+      it "gives correct feedback when guess = 'RRRR' and answer = 'GPGR'" do
+        guess = [r_pin, r_pin, r_pin, r_pin]
+        answer = [g_pin, p_pin, g_pin, r_pin]
+        result = Result.new(guess, answer)
+        expect(result.value).to eq (Result::CORRECT_POSITION * 1)
+      end
+
+      it "gives correct feedback when guess = 'GYRR' and answer = 'GPGR'" do
+        guess = [g_pin, y_pin, r_pin, r_pin]
+        answer = [g_pin, p_pin, g_pin, r_pin]
+        result = Result.new(guess, answer)
+        expect(result.value).to eq (Result::CORRECT_POSITION * 2)
       end
 
     end
