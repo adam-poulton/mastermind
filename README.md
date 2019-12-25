@@ -1,38 +1,26 @@
 # Mastermind
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mastermind`. To experiment with that code, run `bin/console` for an interactive prompt.
+An implementation of the [Mastermind board game](https://en.wikipedia.org/wiki/Mastermind_(board_game)) in Ruby.
 
-TODO: Delete this and the text above, and describe your gem
+Created as part of the [Ruby Programming](https://www.theodinproject.com/courses/ruby-programming/lessons/oop) course for the [The Odin Project](https://www.theodinproject.com/).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Make sure you have ruby installed.
 
-```ruby
-gem 'mastermind'
-```
+Clone the repository to your local machine
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install mastermind
+Run `bundle install` to install dependencies
 
 ## Usage
 
-TODO: Write usage instructions here
+To see the game in action run `ruby example/example.rb` from the project directory
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Use `rake spec` to run the unit tests
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mastermind.
+Bug reports and pull requests are welcome on GitHub at https://github.com/adam-poulton/mastermind.
 
 ## License
 
