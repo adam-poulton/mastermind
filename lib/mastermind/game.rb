@@ -7,8 +7,11 @@ module Mastermind
     end
 
     def play
+      puts "\e[H\e[2J"
       puts "Welcome to Mastermind"
+      puts
       puts "Feedback: * correct placement, - correct colour "
+      puts
       puts "Round #{1} of #{board.max_round}"
       while board.current_round < board.max_round
         board.current_round += 1
